@@ -51,3 +51,5 @@ pip install pandas matplotlib seaborn streamlit scikit-learn xgboost
 Correr: 
 ```bash
 streamlit run main.py
+```
+[Video](https://www.youtube.com/watch?v=VJgwfG208Vk)

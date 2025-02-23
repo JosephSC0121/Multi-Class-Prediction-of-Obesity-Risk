@@ -1,55 +1,51 @@
-# Predicción Multiclase del Riesgo de Obesidad
+# Multiclass Obesity Risk Prediction
 
-Esta aplicación de **Streamlit** utiliza un modelo de **XGBoost** para predecir el riesgo de obesidad basado en múltiples características de los individuos. El código incluye etapas de preprocesamiento de datos, visualización de las distribuciones de las características, entrenamiento del modelo y evaluación de su rendimiento.
+A **Streamlit** application utilizing **XGBoost** to predict obesity risk based on multiple individual characteristics. The project includes data preprocessing, feature distribution visualization, model training, and performance evaluation.
 
-## Estructura del Código
+## ✨ Features
+- **Exploratory data analysis** with key visualizations.
+- **Automated preprocessing** for categorical and numerical data.
+- **Optimized XGBoost model** for multiclass classification.
+- **Interactive Streamlit interface** for real-time predictions.
+- **Results export** to CSV files.
 
-1. **Importación de Librerías**:
-   - `pandas`, `matplotlib`, `seaborn`, `streamlit` para la manipulación de datos, visualización y creación de la interfaz.
-   - `sklearn` para la preparación de datos y evaluación del modelo.
-   - `xgboost` para el modelo de clasificación.
+## 📂 Project Structure
 
-2. **Carga de Datos**:
-   - Los datasets de entrenamiento (`train.csv`) y prueba (`test.csv`) se cargan utilizando `pandas`.
-
-3. **Visualización de Datos**:
-   - Distribución de características numéricas y categóricas.
-   - Análisis comparativo entre las características categóricas y la variable objetivo (`NObeyesdad`).
-
-4. **Preprocesamiento**:
-   - Eliminación de la columna `id`.
-   - Codificación de las características categóricas con `LabelEncoder`.
-   - Separación de los datos en características (`X`) y la variable objetivo (`y`).
-   - División del dataset en conjuntos de entrenamiento y validación.
-
-7. **Entrenamiento del Modelo**:
-   - Entrenamiento del modelo `XGBClassifier` con los datos de entrenamiento.
-
-8. **Evaluación del Modelo**:
-   - Cálculo de la precisión del modelo.
-   - Visualización de la matriz de confusión.
-
-9. **Predicción en el Conjunto de Prueba**:
-   - Predicciones en el conjunto de prueba y creación de un archivo de salida con los resultados.
-
-## Requisitos
-
-- Python 3.x
-- Librerías necesarias:
-  - `pandas`
-  - `matplotlib`
-  - `seaborn`
-  - `streamlit`
-  - `scikit-learn`
-  - `xgboost`
-
-Puedes instalar las dependencias necesarias utilizando el siguiente comando:
-
-```bash
-pip install pandas matplotlib seaborn streamlit scikit-learn xgboost
+```plaintext
+.  
+├── data/          # Training and test datasets  
+│   ├── train.csv  
+│   └── test.csv  
+├── models/        # Trained model storage  
+├── scripts/       # Modularized code  
+│   ├── preprocess.py  # Data preprocessing  
+│   ├── train.py       # Model training  
+│   ├── evaluate.py    # Model evaluation  
+│   └── predict.py     # Prediction on new data  
+├── main.py        # Streamlit interface  
+├── requirements.txt  # Project dependencies  
+└── README.md      # Documentation  
 ```
-Correr: 
-```bash
+
+## 🚀 Installation & Execution
+
+### 1️⃣ Install Dependencies
+```sh
+pip install -r requirements.txt
+```
+
+### 2️⃣ Run the Application
+```sh
 streamlit run main.py
 ```
-[Video](https://www.youtube.com/watch?v=VJgwfG208Vk)
+
+## 📊 Visualization
+
+The application enables visualization of feature distributions, real-time predictions, and model accuracy analysis.
+
+
+## 🎥 Video Demonstration
+[Watch the Video](https://www.youtube.com/watch?v=VJgwfG208Vk)
+
+
+
